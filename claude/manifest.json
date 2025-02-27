@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Archive Link Opener",
+  "version": "1.0",
+  "description": "Opens links with archive.is prepended and query parameters removed",
+  "permissions": ["activeTab", "contextMenus"],
+  "action": {
+    "default_title": "Archive Link Opener"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
